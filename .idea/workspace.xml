@@ -3,43 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f96de87-b4a9-466e-9c57-851a40404f91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/NeuroRA_Handbook_for_EEG:MEG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/demo/NeuroRA_Handbook_for_EEG:MEG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/NeuroRA_Handbook_for_fMRI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/demo/NeuroRA_Handbook_for_fMRI.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/01.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/02.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/03.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/04.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/05.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/06.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/07.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/08.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/09.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo1_figures/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo1_figures/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/07.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/08.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/09.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_figures/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_figures/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo2_rsarlt_img.nii" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo2_rsarlt_img.nii" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/Overview.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/Tutorial.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/Tutorial.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/corr_cal.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/corr_cal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/corr_cal_by_rdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/corr_cal_by_rdm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/corr_to_nii.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/nps_cal.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/nps_cal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/rdm_cal.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/rdm_cal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/rdm_corr.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/rdm_corr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/rsa_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/rsa_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/stps_cal.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/stps_cal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neurora/stuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/neurora/stuff.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,20 +67,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neurora/rsa_plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -133,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neurora/rdm_corr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2895">
+            <state relative-caret-position="2880">
               <caret line="196" column="29" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
             </state>
           </provider>
@@ -142,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neurora/stuff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="210">
               <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
@@ -151,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neurora/corr_cal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9480">
+            <state relative-caret-position="9615">
               <caret line="641" column="24" selection-start-line="641" selection-start-column="24" selection-end-line="641" selection-end-column="24" />
               <folding>
                 <element signature="e#153#171#0" expanded="true" />
@@ -163,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neurora/corr_cal_by_rdm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="345">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#152#170#0" expanded="true" />
@@ -175,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neurora/rdm_cal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
+            <state relative-caret-position="1665">
               <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
                 <element signature="e#120#138#0" expanded="true" />
@@ -188,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-172">
+              <first_editor relative-caret-position="135">
                 <caret line="9" selection-start-line="9" selection-end-line="9" />
               </first_editor>
               <second_editor />
@@ -200,8 +164,8 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
-                <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <first_editor relative-caret-position="183">
+                <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
               </first_editor>
               <second_editor />
             </state>
@@ -277,10 +241,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="83" />
-    <option name="y" value="60" />
-    <option name="width" value="1255" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="167" />
+    <option name="y" value="69" />
+    <option name="width" value="1253" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -496,17 +460,19 @@
       <workItem from="1583286574087" duration="30352000" />
       <workItem from="1583835173200" duration="823000" />
       <workItem from="1585367145200" duration="6247000" />
-      <workItem from="1587920572772" duration="724000" />
+      <workItem from="1587920572772" duration="1456000" />
+      <workItem from="1588059665626" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289880000" />
+    <option name="totallyTimeSpent" value="290659000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="23" width="1253" height="777" extended-state="6" />
+    <frame x="167" y="69" width="1253" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2807597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2898431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -598,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/lib/neurora/corr_cal.py" />
     <entry file="file://$PROJECT_DIR$/build/lib/neurora/rdm_cal.py" />
     <entry file="file://$PROJECT_DIR$/neurora/__init__.py">
@@ -633,6 +592,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neurora/corr_to_nii.py" />
     <entry file="file://$PROJECT_DIR$/neurora/rsa_plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -649,28 +609,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neurora/rdm_corr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2895">
+        <state relative-caret-position="2880">
           <caret line="196" column="29" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neurora/stuff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="210">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neurora/corr_to_nii.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neurora/corr_cal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9480">
+        <state relative-caret-position="9615">
           <caret line="641" column="24" selection-start-line="641" selection-start-column="24" selection-end-line="641" selection-end-column="24" />
           <folding>
             <element signature="e#153#171#0" expanded="true" />
@@ -680,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neurora/corr_cal_by_rdm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="345">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#152#170#0" expanded="true" />
@@ -690,7 +643,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neurora/rdm_cal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
+        <state relative-caret-position="1665">
           <caret line="111" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="e#120#138#0" expanded="true" />
@@ -701,18 +654,25 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-172">
+          <first_editor relative-caret-position="135">
             <caret line="9" selection-start-line="9" selection-end-line="9" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <first_editor relative-caret-position="183">
+            <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
           </first_editor>
           <second_editor />
         </state>
@@ -721,7 +681,7 @@
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
