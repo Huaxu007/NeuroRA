@@ -12,9 +12,9 @@ In addition, users can do **Neural Pattern Similarity (NPS)**, **Spatiotemporal 
 > pip install neurora
 
 ## Website & How to use
-See more details at the [NeuroRA website](https://zitonglu1996.github.io/NeuroRA/).
+See more details at the [NeuroRA website](https://neurora.github.io/NeuroRA/).
 
-You can read or download the [Tutorial here](https://zitonglu1996.github.io/NeuroRA/neurora/Tutorial.pdf) to know how to use NeuroRA.
+You can read or download the [Tutorial here](https://neurora.github.io/NeuroRA/neurora/Tutorial.pdf) to know how to use NeuroRA.
 
 ## Required Dependencies:
 
