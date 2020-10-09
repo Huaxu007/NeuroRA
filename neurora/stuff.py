@@ -470,7 +470,8 @@ def datamask(fmri_data, mask_data):
     """
     filter the data by a ROI mask
 
-    Parameters:
+    Parameters
+    ----------
     fmri_data : array
         The fMRI data.
         The shape of fmri_data is [nx, ny, nz]. nx, ny, nz represent the size of the fMRI data.
@@ -506,15 +507,15 @@ def position_to_mni(point, affine):
     """
     project the position in matrix coordinate system to the position in MNI coordinate system
 
-    Parameters:
-    -----------
+    Parameters
+    ----------
     point : list or array
         The position in matrix coordinate system.
     affine : array or list
         The position information of the fMRI-image array data in a reference space.
 
-    Returns:
-    --------
+    Returns
+    -------
     newpoint : array
         The position in MNI coordinate system.
     """
@@ -539,8 +540,8 @@ def mask_to(mask, filename, size, affine):
     """
     convert mask data of certain template to your data template
 
-    Parameters:
-    -----------
+    Parameters
+    ----------
     mask : string
         The file path+filename for the mask of certain template.
     filename : string. Default is 'newmask.nii'.

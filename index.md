@@ -8,7 +8,7 @@
 ## Overview
 **Representational Similarity Analysis (RSA)** has become a popular and effective method to measure the representation of multivariable neural activity in different modes.
 
-**NeuroRA** is an easy-to-use toolbox based on **Python**, which can do some works about **RSA** among nearly all kinds of neural data, including **behavioral, EEG, MEG, fNIRS, ECoG, electrophysiological and fMRI data**.
+**NeuroRA** is an easy-to-use toolbox based on **Python**, which can do some works about **RSA** among nearly all kinds of neural data, including **behavioral, EEG, MEG, fNIRS, ECoG, fMRI and some other neuroelectrophysiological data**.
 In addition, users can do **Neural Pattern Similarity (NPS)**, **Spatiotemporal Pattern Similarity (STPS)** & **Inter-Subject Correlation (ISC)** on **NeuroRA**.
 
 ![ ](img/Overview.png)
@@ -23,7 +23,7 @@ Lu, Z., & Ku, Y. NeuroRA: A Python toolbox of representational analysis from mul
 
 ## Documentation
 
-You can read or download the **[Tutorial here](https://neurora.github.io/NeuroRA/neurora/Tutorial.pdf)**.
+You can read the **[Documentation here](https://neurora.github.io/documentation/index.html)** or download the **[Tutorial here](https://neurora.github.io/NeuroRA/neurora/Tutorial.pdf)**.
 
 ## Required Dependencies:
 - **[Numpy](http://www.numpy.org)**: a fundamental package for scientific computing
