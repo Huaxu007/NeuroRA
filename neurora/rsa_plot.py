@@ -10,12 +10,12 @@ from scipy.interpolate import interp1d
 from scipy import signal
 from nilearn import plotting, datasets, surface
 import nibabel as nib
-from neurora.stuff import get_affine, correct_by_threshold, get_bg_ch2, get_bg_ch2bet
+from neurora.stuff import get_affine, permutation_test, correct_by_threshold, get_bg_ch2, get_bg_ch2bet
 
 
 ' a function for plotting the RDM '
 
-def plot_rdm(rdm, rescale=False, lim=[0, 1], conditions=None, con_fontsize=12, cmap=None):
+def plot_rdm(rdm, percentile=False, rescale=False, lim=[0, 1], conditions=None, con_fontsize=12, cmap=None):
 
     """
     Plot the RDM
@@ -24,12 +24,14 @@ def plot_rdm(rdm, rescale=False, lim=[0, 1], conditions=None, con_fontsize=12, c
     ----------
     rdm : array or list [n_cons, n_cons]
         A representational dissimilarity matrix.
-    lim : array or list [min, max]. Default is [0, 1].
-        The corrs view lims.
+    percentile : bool True or False. Default is False.
+        Rescale the values in RDM or not by displaying the percentile.
     rescale : bool True or False. Default is False.
         Rescale the values in RDM or not.
         Here, the maximum-minimum method is used to rescale the values except for the
         values on the diagnal.
+    lim : array or list [min, max]. Default is [0, 1].
+        The corrs view lims.
     conditions : string-array or string-list. Default is None.
         The labels of the conditions for plotting.
         conditions should contain n_cons strings, If conditions=None, the labels of conditions will be invisible.
@@ -54,8 +56,34 @@ def plot_rdm(rdm, rescale=False, lim=[0, 1], conditions=None, con_fontsize=12, c
     if a != b:
         return None
 
+    if percentile == True:
+
+        v = np.zeros([cons * cons, 2], dtype=np.float)
+        for i in range(cons):
+            for j in range(cons):
+                v[i * cons + j, 0] = rdm[i, j]
+
+        index = np.argsort(v[:, 0])
+        m = 0
+        for i in range(cons * cons):
+            if i > 0:
+                if v[index[i], 0] > v[index[i - 1], 0]:
+                    m = m + 1
+                v[index[i], 1] = m
+
+        v[:, 0] = v[:, 1] * 100 / m
+
+        for i in range(cons):
+            for j in range(cons):
+                rdm[i, j] = v[i * cons + j, 0]
+
+        if cmap == None:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=plt.cm.jet, clim=(0, 100))
+        else:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=cmap, clim=(0, 100))
+
     # rescale the RDM
-    if rescale == True:
+    elif rescale == True:
 
         # flatten the RDM
         vrdm = np.reshape(rdm, [cons * cons])
@@ -78,22 +106,34 @@ def plot_rdm(rdm, rescale=False, lim=[0, 1], conditions=None, con_fontsize=12, c
                     if i != j:
                         rdm[i, j] = float((rdm[i, j] - minvalue) / (maxvalue - minvalue))
 
-    # plot the RDM
-    min = lim[0]
-    max = lim[1]
-    if cmap == None:
-        plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=plt.cm.jet, clim=(min, max))
+        # plot the RDM
+        min = lim[0]
+        max = lim[1]
+        if cmap == None:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=plt.cm.jet, clim=(min, max))
+        else:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=cmap, clim=(min, max))
+
     else:
-        plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=cmap, clim=(min, max))
+
+        # plot the RDM
+        min = lim[0]
+        max = lim[1]
+        if cmap == None:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=plt.cm.jet, clim=(min, max))
+        else:
+            plt.imshow(rdm, extent=(0, 1, 0, 1), cmap=cmap, clim=(min, max))
 
     # plt.axis("off")
     cb = plt.colorbar()
     cb.ax.tick_params(labelsize=16)
     font = {'size': 18}
 
-    if rescale == True:
+    if percentile == True:
+        cb.set_label("Dissimilarity (percentile)", fontdict=font)
+    elif rescale == True:
         cb.set_label("Dissimilarity (Rescaling)", fontdict=font)
-    elif rescale == False:
+    else:
         cb.set_label("Dissimilarity", fontdict=font)
 
     if conditions != None:
@@ -277,6 +317,85 @@ def plot_corrs_by_time(corrs, labels=None, time_unit=[0, 0.1]):
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
+    plt.show()
+
+
+def plot_tbytsim_withstats(Similarities, start_time=0, end_time=1, color='r', lim=[-0.1, 0.8]):
+
+    """
+    Plot the time-by-time Similarities averaging all subjects
+
+    Parameters
+    ----------
+    Similarities : array
+        The Similarities.
+        The size of Similarities should be [n_subs, n_ts] or [n_subs, n_ts, 2]. n_subs, n_ts represent the number of
+        subjects and number of time-points. 2 represents the similarity and a p-value.
+    start_time : int or float. Default is 0.
+        The start time.
+    end_time : int or float. Default is 1.
+        The end time.
+    color : matplotlib color or None. Default is 'r'.
+        The color for the curve.
+    lim : array or list [min, max]. Default is [-0.1, 0.8].
+        The corrs view lims.
+    """
+
+    n = len(np.shape(Similarities))
+
+    minlim = lim[0]
+    maxlim = lim[1]
+
+    if n == 3:
+        Similarities = Similarities[:, :, 0]
+
+    nsubs = np.shape(Similarities)[0]
+    nts = np.shape(Similarities)[1]
+
+    tstep = float((end_time-start_time)/nts)
+
+    for sub in range(nsubs):
+        for t in range(nts):
+
+            if t<=1:
+                Similarities[sub, t] = np.average(Similarities[sub, :t+3])
+            if t>1 and t<(nts-2):
+                Similarities[sub, t] = np.average(Similarities[sub, t-2:t+3])
+            if t>=(nts-2):
+                Similarities[sub, t] = np.average(Similarities[sub, t-2:])
+
+    avg = np.average(Similarities, axis=0)
+    err = np.zeros([nts], dtype=np.float)
+
+    for t in range(nts):
+        err[t] = np.std(Similarities[:, t], ddof=1)/np.sqrt(nsubs)
+
+    ps = np.zeros([nts], dtype=np.float)
+    chance = np.full([nsubs], 0)
+
+    for t in range(nts):
+        ps[t] = permutation_test(Similarities[:, t], chance)
+        if ps[t] < 0.05 and avg[t] > 0:
+            plt.plot(t*tstep+start_time, maxlim*0.9, 's', color=color, alpha=1)
+            xi = [t*tstep+start_time, t*tstep+tstep+start_time]
+            ymin = [0]
+            ymax = [avg[t]-err[t]]
+            plt.fill_between(xi, ymax, ymin, facecolor=color, alpha=0.1)
+
+    ax = plt.gca()
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_linewidth(3)
+    ax.spines["bottom"].set_linewidth(3)
+    ax.spines['bottom'].set_position(('data', 0))
+
+    x = np.arange(start_time+0.5*tstep, end_time+0.5*tstep, tstep)
+    plt.fill_between(x, avg + err, avg - err, facecolor=color, alpha=0.8)
+    plt.ylim(minlim, maxlim)
+    plt.xlim(start_time, end_time)
+    plt.tick_params(labelsize=12)
+    plt.xlabel("Time (s)", fontsize=16)
+    plt.ylabel("Representational Similarity", fontsize=16)
     plt.show()
 
 

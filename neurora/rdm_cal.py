@@ -14,7 +14,7 @@ np.seterr(divide='ignore', invalid='ignore')
 
 ' a function for calculating the RDM(s) based on behavioral data '
 
-def bhvRDM(bhv_data, sub_opt=0, method="correlation", abs=True):
+def bhvRDM(bhv_data, sub_opt=0, method="correlation", abs=False):
 
     """
     Calculate the Representational Dissimilarity Matrix(Matrices) - RDM(s) for behavioral data
@@ -110,7 +110,7 @@ def bhvRDM(bhv_data, sub_opt=0, method="correlation", abs=True):
 
                         # not on the diagnal
                         if i != j:
-                            rdm[i, j] = float((rdm[i, j] - minvalue) / (maxvalue - minvalue))
+                            rdm[i, j] = (rdm[i, j] - minvalue) / (maxvalue - minvalue)
             rdms[sub] = rdm
 
         return rdms
@@ -153,14 +153,14 @@ def bhvRDM(bhv_data, sub_opt=0, method="correlation", abs=True):
     if method is 'euclidean' or method is 'mahalanobis':
         max = np.max(rdm)
         min = np.min(rdm)
-        rdm = float((rdm-min)/(max-min))
+        rdm = (rdm-min)/(max-min)
 
     return rdm
 
 
 ' a function for calculating the RDM(s) based on EEG/MEG/fNIRS data '
 
-def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, method="correlation", abs=True):
+def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, method="correlation", abs=False):
 
     """
     Calculate the Representational Dissimilarity Matrix(Matrices) - RDM(s) for EEG/MEG/fNIRS data
@@ -273,7 +273,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
                             if method is 'euclidean' or method is 'mahalanobis':
                                 max = np.max(rdms[i, j, k])
                                 min = np.min(rdms[i, j, k])
-                                rdms[i, j, k] = float((rdms[i, j, k] - min) / (max - min))
+                                rdms[i, j, k] = (rdms[i, j, k] - min) / (max - min)
 
                 return rdms
 
@@ -319,7 +319,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
                     if method is 'euclidean' or method is 'mahalanobis':
                         max = np.max(rdms[i, j])
                         min = np.min(rdms[i, j])
-                        rdms[i, j] = float((rdms[i, j] - min) / (max - min))
+                        rdms[i, j] = (rdms[i, j] - min) / (max - min)
 
             return rdms
 
@@ -367,7 +367,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
                     if method is 'euclidean' or method is 'mahalanobis':
                         max = np.max(rdms[i, j])
                         min = np.min(rdms[i, j])
-                        rdms[i, j] = float((rdms[i, j] - min) / (max - min))
+                        rdms[i, j] = (rdms[i, j] - min) / (max - min)
 
             return rdms
 
@@ -413,7 +413,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
             if method is 'euclidean' or method is 'mahalanobis':
                 max = np.max(rdms[i])
                 min = np.min(rdms[i])
-                rdms[i] = float((rdms[i] - min) / (max - min))
+                rdms[i] = (rdms[i] - min) / (max - min)
 
         return rdms
 
@@ -464,7 +464,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
                     if method is 'euclidean' or method is 'mahalanobis':
                         max = np.max(rdms[i, j])
                         min = np.min(rdms[i, j])
-                        rdms[i, j] = float((rdms[i, j] - min) / (max - min))
+                        rdms[i, j] = (rdms[i, j] - min) / (max - min)
 
             return rdms
 
@@ -508,7 +508,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
             if method is 'euclidean' or method is 'mahalanobis':
                 max = np.max(rdms[i])
                 min = np.min(rdms[i])
-                rdms[i] = float((rdms[i] - min) / (max - min))
+                rdms[i] = (rdms[i] - min) / (max - min)
 
         return rdms
 
@@ -558,7 +558,7 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
             if method is 'euclidean' or method is 'mahalanobis':
                 max = np.max(rdms[i])
                 min = np.min(rdms[i])
-                rdms[i] = float((rdms[i] - min) / (max - min))
+                rdms[i] = (rdms[i] - min) / (max - min)
 
         return rdms
 
@@ -605,14 +605,14 @@ def eegRDM(EEG_data, sub_opt=0, chl_opt=0, time_opt=0, time_win=5, time_step=5, 
     if method is 'euclidean' or method is 'mahalanobis':
         max = np.max(rdm)
         min = np.min(rdm)
-        rdm = float((rdm - min) / (max - min))
+        rdm = (rdm - min) / (max - min)
 
     return rdm
 
 
 ' a function for calculating the RDM based on fMRI data (searchlight) '
 
-def fmriRDM(fmri_data, ksize=[3, 3, 3], strides=[1, 1, 1], sub_result=0, method="correlation", abs=True):
+def fmriRDM(fmri_data, ksize=[3, 3, 3], strides=[1, 1, 1], sub_result=0, method="correlation", abs=False):
 
     """
     Calculate the Representational Dissimilarity Matrices (RDMs) for fMRI data (Searchlight)
@@ -723,7 +723,7 @@ def fmriRDM(fmri_data, ksize=[3, 3, 3], strides=[1, 1, 1], sub_result=0, method=
                     if method is 'euclidean' or method is 'mahalanobis':
                         max = np.max(subrdms[sub, x, y, z])
                         min = np.min(subrdms[sub, x, y, z])
-                        subrdms[sub, x, y, z] = float((subrdms[sub, x, y, z] - min) / (max - min))
+                        subrdms[sub, x, y, z] = (subrdms[sub, x, y, z] - min) / (max - min)
 
     # average the RDMs
     rdms = np.average(subrdms, axis=0)
@@ -736,7 +736,7 @@ def fmriRDM(fmri_data, ksize=[3, 3, 3], strides=[1, 1, 1], sub_result=0, method=
 
 ' a function for calculating the RDM based on fMRI data of a ROI '
 
-def fmriRDM_roi(fmri_data, mask_data, sub_result=0, method="correlation", abs=True):
+def fmriRDM_roi(fmri_data, mask_data, sub_result=0, method="correlation", abs=False):
 
     """
     Calculate the Representational Dissimilarity Matrix - RDM(s) for fMRI data (for ROI)
@@ -833,7 +833,7 @@ def fmriRDM_roi(fmri_data, mask_data, sub_result=0, method="correlation", abs=Tr
         if method is 'euclidean' or method is 'mahalanobis':
             max = np.max(subrdms[sub])
             min = np.min(subrdms[sub])
-            subrdms[sub] = float((subrdms[sub] - min) / (max - min))
+            subrdms[sub] = (subrdms[sub] - min) / (max - min)
 
     # average the RDMs
     rdm = np.average(subrdms, axis=0)

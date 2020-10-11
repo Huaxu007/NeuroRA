@@ -105,7 +105,7 @@ plot_nps_hotmap(nps[:, :, 0], time_unit=[0, 0.01], abs=True, smooth=True)
 rdm = eegRDM(megdata[:, :, :, :, 290:310])
 
 # Plot this RDM
-plot_rdm(rdm, rescale=True)
+plot_rdm(rdm, percentile=True)
 
 
 
@@ -115,10 +115,10 @@ plot_rdm(rdm, rescale=True)
 # (raw sampling requency is 1000Hz, so here time_win=10ms/(1s/1000Hz)/1000=10)
 rdms = eegRDM(megdata, time_opt=1, time_win=10, time_step=10)
 
-# Plot the RDM of 0ms, 50ms, 100ms, 150ms, 200ms
+# Plot the RDM of -100ms, 0ms, 50ms, 100ms, 150ms, 200ms
 times = [0, 10, 20, 30, 40, 50]
 for t in times:
-    plot_rdm(rdms[t], rescale=True)
+    plot_rdm(rdms[t], percentile=True)
 
 
 
@@ -130,7 +130,7 @@ rdm_sample1 = rdms[30]
 rdm_sample2 = rdms[90]
 
 # calculate the correlation coefficient between these two RDMs
-corr = rdm_correlation_spearman(rdm_sample1, rdm_sample2, rescale=True)
+corr = rdm_correlation_spearman(rdm_sample1, rdm_sample2)
 print(corr)
 
 
