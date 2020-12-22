@@ -248,7 +248,7 @@ def plot_tbytresults(decoding_results_dir, subs):
         err[t] = np.std(rlts[:, t], ddof=1) / np.sqrt(nsubs)
 
     ps = np.zeros([100], dtype=np.float)
-    chance = np.full([16], 0.0625)
+    chance = np.full([len(subs)], 0.0625)
     for t in range(100):
         ps[t] = permutation_test(rlts[:, t], chance)
         if ps[t] < 0.05 and avg[t] > 0.0625:

@@ -202,7 +202,7 @@ def corr_save_nii(corrs, affine, filename=None, corr_mask=get_HOcort(), size=[60
     # in order to avoid results showing outside of the brain
     if corr_mask == get_HOcort():
 
-        mask_to(get_bg_ch2bet(), filename, size, affine)
+        mask_to(get_bg_ch2bet(), size, affine, filename=filename)
         mask = nib.load(filename).get_fdata()
         print(mask.shape)
 

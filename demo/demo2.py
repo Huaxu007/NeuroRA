@@ -54,7 +54,7 @@ fmri_data = np.full([ncon, nx, ny, nz], np.nan)
 
 for i in range(ncon):
     img = mean_img(index_img(func_filename, labels.isin([categories[i]])))
-    fmri_data[i] = datamask(img.get_data(), maskdata)
+    fmri_data[i] = datamask(img.get_fdata(), maskdata)
 
 # get fmri data under 'face'-condition
 face_img = nib.Nifti1Image(fmri_data[0], affine=img.affine)
@@ -119,7 +119,7 @@ plot_rdm(rdm_roi, rescale=True, conditions=categories)
 """**********       Section 6: Calculating the RDM by Searchlight and Plotting        **********"""
 
 # calculate the RDMs by Searchlight
-fmri_RDMs = fmriRDM(fmri_data)
+fmri_RDMs = fmriRDM(fmri_data, sub_opt=0)
 
 # plot one of the RDMs
 plot_rdm(fmri_RDMs[20, 30, 30], rescale=True, conditions=categories)
