@@ -15,7 +15,7 @@ In addition, users can do **Neural Pattern Similarity (NPS)**, **Spatiotemporal 
 
 ## Paper
 
-Lu, Z., & Ku, Y. (in press). NeuroRA: A Python toolbox of representational analysis from multi-modal neural data. Frontiers in Neuroinformatics. doi: 10.3389/fninf.2020.563669
+Lu, Z., & Ku, Y. (2020). NeuroRA: A Python toolbox of representational analysis from multi-modal neural data. Frontiers in Neuroinformatics. 14:563669. doi: 10.3389/fninf.2020.563669
 
 ## Installation
 
@@ -86,9 +86,9 @@ There are two demos in Tutorial to let you know how to use NeuroRA to conduct re
 
 |   | Run the Demo | View the Demo |
 | - | --- | ---- |
-| Demo 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo1.ipynb) |
-| Demo 2 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo2.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo2.ipynb) |
-| Demo 3 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo3.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo3.ipynb) |
+| Demo 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo1_colab.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo1.ipynb) |
+| Demo 2 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo2_colab.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo2.ipynb) |
+| Demo 3 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo3_colab.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/neurora/NeuroRA/blob/master/demo/NeuroRA_Demo3.ipynb) |
 
 - **Demo 1 for EEG/MEG**, based on visual-92-categories-task MEG dataset, includes 8 sections.
     
